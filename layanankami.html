@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>tbchealth</title>
+    <link rel="shortcut icon" href="tbclogo.png" type="image/x-icon">
+
+    <script>
+if(localStorage.getItem("username")==null){
+    alert("Silakan login terlebih dahulu.");
+    window.location.href="login.html";
+}
+</script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Jangan khawatir ingin konsultasi kemana</h1>
+</header>
+
+<nav>
+      <a href="informasitbc.html">Informasi TBC</a>
+      <a href="layanankami.html">Layanan Kami</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="diagnosis.html">Mulai Diagnosis</a>
+      <a href="deskripsi.html">Deskripsi Sistem</a>
+      <a href="kontakkami.html">Kontak Kami</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+<div class="container">
+
+    <h2>Layanan Kami</h2>
+
+    <h3>Tidak perlu khawatir ingin konsultasi kemana, kami menyediakan layanan pilih dokter sesuai lokasi terdekat</h3>
+
+    <h3>🏥 Puskesmas Rujukan TBC</h3>
+
+    <h3>📍 Cari Puskesmas Terdekat</h3>
+
+<label>Provinsi</label>
+<select id="provinsi" onchange="pilihProvinsi()">
+    <option value="">-- Pilih Provinsi --</option>
+    <option value="jabar">Jawa Barat</option>
+    <option value="jateng">Jawa Tengah</option>
+    <option value="jatim">Jawa Timur</option>
+    <option value="dki">DKI Jakarta</option>
+</select>
+
+<br><br>
+
+<label>Kabupaten / Kota</label>
+<select id="kabupaten" onchange="pilihKabupaten()">
+    <option>-- Pilih Kabupaten --</option>
+</select>
+
+<br><br>
+
+<label>Kecamatan</label>
+<select id="kecamatan" onchange="pilihKecamatan()">
+    <option>-- Pilih Kecamatan --</option>
+</select>
+
+<br><br>
+
+<div id="hasilPuskesmas"></div>
+
+<hr>
+
+    <h3>👨‍⚕️ Pilih Dokter Penanganan TBC</h3>
+
+    <select id="dokter" onchange="pilihDokter()">
+
+        <option value="">-- Pilih Dokter --</option>
+
+        <option value="1">dr. Ahmad Fauzi</option>
+
+        <option value="2">dr. Siti Rahma</option>
+
+        <option value="3">dr. Budi Santoso</option>
+
+    </select>
+
+    <div id="hasilDokter" class="hasil-dokter">
+
+        Silakan pilih dokter terlebih dahulu.
+
+    </div>
+
+</div>
+
+<script src="layanankami.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>

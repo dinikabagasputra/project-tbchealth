@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>tbchealth</title>
+    <link rel="shortcut icon" href="tbclogo.png" type="image/x-icon" />
+
+    <script>
+      if (localStorage.getItem("username") == null) {
+        alert("Silakan login terlebih dahulu.");
+        window.location.href = "login.html";
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Mari cari tahu kondisimu</h1>
+    </header>
+
+    <nav>
+      <a href="informasitbc.html">Informasi TBC</a>
+      <a href="layanankami.html">Layanan Kami</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="diagnosis.html">Mulai Diagnosis</a>
+      <a href="deskripsi.html">Deskripsi Sistem</a>
+      <a href="kontakkami.html">Kontak Kami</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <div class="container">
+      <section class="hero-diagnosis">
+        <h1>🩺 Deteksi Dini Risiko Tuberkulosis (TBC)</h1>
+
+        <p>
+          Jawablah pertanyaan berikut sesuai kondisi yang Anda alami. Hasil
+          skrining ini hanya sebagai pemeriksaan awal dan bukan pengganti
+          diagnosis dokter.
+        </p>
+      </section>
+
+      <form id="formDiagnosa">
+        <div class="card-diagnosis">
+          <h2>Data Pasien</h2>
+
+          <div class="form-grid">
+            <div>
+              <label>Nama Lengkap</label>
+
+              <input type="text" id="nama" placeholder="Masukkan nama pasien" />
+            </div>
+
+            <div>
+              <label>Umur</label>
+
+              <input type="number" id="umur" placeholder="Masukkan umur" />
+            </div>
+
+            <div>
+              <label>Jenis Kelamin</label>
+
+              <select id="jk">
+                <option value="">Pilih</option>
+
+                <option>Laki-laki</option>
+
+                <option>Perempuan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-diagnosis">
+          <h2>Gejala yang Dialami</h2>
+
+          <p class="keterangan">
+            Silakan centang gejala yang sedang Anda alami.
+          </p>
+
+          <div id="progressBox">
+            <div id="progressBar"></div>
+          </div>
+
+          <p id="progressText">0 dari 10 gejala dipilih</p>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Batuk lebih dari 2 minggu
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Batuk berdahak
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Batuk berdarah
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Demam berkepanjangan
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Berkeringat malam hari
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Berat badan menurun
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Nafsu makan menurun
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Mudah lelah
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Nyeri dada
+          </label>
+
+          <label class="gejala-item">
+            <input type="checkbox" class="gejala" />
+            Sesak napas
+          </label>
+        </div>
+
+        <div class="button-group">
+          <button type="button" onclick="hasilDiagnosa()">
+            🔍 Cek Diagnosis
+          </button>
+
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
+      <div id="hasil"></div>
+    </div>
+
+    <script src="diagnosis.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

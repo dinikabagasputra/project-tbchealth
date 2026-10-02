@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>tbchealth</title>
+    <link rel="shortcut icon" href="tbclogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>tbchealth.community</h1>
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+</header>
+
+<nav>
+    <a href="beranda.html">Beranda</a>
+
+    <a href="#" onclick="cekLogin('informasitbc.html')">
+        Informasi TBC
+    </a>
+
+    <a href="#" onclick="cekLogin('layanankami.html')">
+        Layanan Kami
+    </a>
+
+    <a href="#" onclick="cekLogin('artikel.html')">
+        Artikel
+    </a>
+
+    <a href="#" onclick="cekLogin('diagnosis.html')">
+        Mulai Diagnosis
+    </a>
+
+    <a href="#" onclick="cekLogin('deskripsi.html')">
+        Deskripsi Sistem
+    </a>
+
+    <a href="#" onclick="cekLogin('kontakkami.html')">
+        Kontak Kami
+    </a>
+
+    <a href="login.html">Login</a>
+</nav>
+
+<div class="container">
+
+    <div class="tbc-box">
+
+        <div class="gambar">
+            <img src="beranda.png" alt="TBC">
+        </div>
+
+        <div class="isi">
+            <h1>tbchealth solusi hidup sehatmu</h1>
+            <h1>yuk kenali penyakitnya dan cara ngatasinya bersama kami</h1>
+             <p>Website ini dirancang untuk membantu masyarakat melakukan diagnosis awal penyakit Tuberkulosis (TBC) berdasarkan gejala yang dialami. Sistem ini bukan pengganti pemeriksaan dokter, namun dapat menjadi media skrining awal sehingga pengguna dapat segera memperoleh penanganan medis apabila memiliki risiko terkena TBC.</p>
+             <a href="login.html" class="btn">
+             Login Sekarang
+             </a>
+        </div>
+    </div>
+</div>
+
+<script>
+function cekLogin(halaman){
+
+    if(localStorage.getItem("username")){
+
+        window.location.href = halaman;
+
+    }else{
+
+        alert("Silakan login terlebih dahulu!");
+
+        window.location.href = "login.html";
+
+    }
+
+}
+</script>
+
+</body>
+</html>

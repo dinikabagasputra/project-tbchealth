@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>tbchealth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="tbclogo.png" type="image/x-icon">
+
+    <script>
+if(localStorage.getItem("username")==null){
+    alert("Silakan login terlebih dahulu.");
+    window.location.href="login.html";
+}
+</script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Deskripsi Sistem</h1>
+</header>
+
+<nav>
+      <a href="informasitbc.html">Informasi TBC</a>
+      <a href="layanankami.html">Layanan Kami</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="diagnosis.html">Mulai Diagnosis</a>
+      <a href="deskripsi.html">Deskripsi Sistem</a>
+      <a href="kontakkami.html">Kontak Kami</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+<div class="Tentangsistem">
+    <h2>Tentang Sistem</h2>
+    <p>
+        Sistem Diagnosis Tuberkulosis (TBC) Berbasis Web merupakan aplikasi berbasis teknologi informasi yang dirancang sebagai media skrining awal untuk membantu masyarakat mengenali kemungkinan gejala penyakit Tuberkulosis (TBC). Sistem ini dikembangkan dengan mengadopsi konsep deteksi dini melalui pengisian data diri dan serangkaian pertanyaan mengenai gejala yang umum dialami oleh penderita TBC.
+    </p>
+
+    <p>
+        Hasil yang diberikan oleh sistem berupa indikasi awal tingkat risiko berdasarkan jawaban pengguna terhadap gejala yang dipilih. Informasi tersebut bukan merupakan diagnosis medis, melainkan sebagai sarana edukasi dan rekomendasi awal agar pengguna dapat segera berkonsultasi dengan tenaga kesehatan apabila memiliki risiko tinggi terhadap penyakit Tuberkulosis.
+    </p>
+
+    <p>Selain menyediakan layanan diagnosis awal, sistem ini juga menghadirkan informasi kesehatan yang komprehensif mengenai Tuberkulosis, meliputi pengertian penyakit, penyebab, faktor risiko, gejala, cara penularan, metode pencegahan, hingga pentingnya pengobatan yang tuntas. Dengan demikian, pengguna tidak hanya memperoleh hasil skrining, tetapi juga memperoleh edukasi kesehatan yang dapat meningkatkan kesadaran terhadap bahaya TBC.</p>
+
+    <p>Sebagai bentuk dukungan terhadap akses pelayanan kesehatan, sistem ini dilengkapi dengan fitur pencarian fasilitas kesehatan terdekat, sehingga pengguna dapat menemukan Puskesmas atau rumah sakit sesuai wilayah yang dipilih untuk melakukan pemeriksaan lebih lanjut. Fitur ini diharapkan dapat mempercepat proses penanganan serta meningkatkan peluang keberhasilan pengobatan melalui deteksi dan intervensi sedini mungkin.</p>
+
+    <p>Pengembangan sistem dilakukan dengan memperhatikan aspek kemudahan penggunaan (usability), aksesibilitas, dan keamanan data pengguna, sehingga aplikasi dapat digunakan oleh berbagai kalangan masyarakat melalui perangkat komputer maupun telepon pintar yang terhubung dengan internet.</p>
+
+    <p>Sistem ini dikembangkan sebagai proyek akademik Kelompok 5 dalam rangka penerapan teknologi informasi pada bidang kesehatan. Proses pengembangannya melibatkan pembagian tugas yang terstruktur mulai dari analisis kebutuhan sistem, perancangan antarmuka, implementasi program, pengujian, hingga dokumentasi, sehingga menghasilkan aplikasi yang informatif, mudah digunakan, dan memberikan manfaat bagi masyarakat sebagai media skrining awal penyakit Tuberkulosis.</p>
+
+</div>
+
+<div class="Visi">
+    <h2>Visi</h2>
+
+    <p>Menjadi media skrining awal Tuberkulosis berbasis web yang mudah diakses, informatif, dan mendukung peningkatan kesadaran masyarakat terhadap pentingnya deteksi dini penyakit TBC.</p>
+</div>
+
+<div class="Misi">
+    <h2>Misi</h2>
+
+    <ul>
+        <li>Memberikan layanan skrining awal TBC secara cepat dan mudah diakses.</li>
+        <li>Menyediakan informasi kesehatan mengenai Tuberkulosis yang akurat dan mudah dipahami.</li>
+        <li>Membantu masyarakat menemukan fasilitas pelayanan kesehatan terdekat.</li>
+        <li>Meningkatkan kesadaran masyarakat akan pentingnya deteksi dini dan pengobatan TBC.</li>
+        <li>Mendukung pemanfaatan teknologi informasi dalam bidang kesehatan.</li>
+    </ul>
+</div>
+    <script src="login.js"></script>
+</body>
+</html>

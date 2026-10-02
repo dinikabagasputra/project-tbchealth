@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tbchealth</title>
+    <link rel="shortcut icon" href="tbclogo.png" type="image/x-icon">
+
+    <script>
+    if(localStorage.getItem("username") != null){
+        window.location.href = "dashboard.html";
+    }
+</script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Ayo login dulu sebelum lanjut</h1>
+</header>
+
+<nav>
+      <a href="beranda.html">Beranda</a>
+      <a href="informasitbc.html">Informasi TBC</a>
+      <a href="layanankami.html">Layanan Kami</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="diagnosis.html">Mulai Diagnosis</a>
+      <a href="deskripsi.html">Deskripsi Sistem</a>
+      <a href="kontakkami.html">Kontak Kami</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+<div class="login">
+
+    <h2>tbchealth</h2>
+
+<div class="logo">
+    <img src="tbclogo.png" alt="Logo">
+</div>
+
+     <form onsubmit="login(event)" class="login-form">
+
+       <div class="input-box">
+        <label>👤 Username</label>
+        <input type="text" id="username" placeholder="Masukkan Username" required>
+       </div>
+
+       <div class="input-box">
+        <label>🔒 Password</label>
+        <input type="password" id="password" placeholder="Masukkan Password" required>
+       </div>
+
+    <button type="submit" class="login-btn">
+        Login
+    </button>
+
+    <p style="text-align:center; margin-top:15px;">
+    Belum punya akun?
+    <a href="register.html">Buat Akun</a>
+    </p>
+</form>
+
+<p id="pesan"></p>
+
+    <script src="login.js"></script>
+
+</div>
+
+</body>
+</html>

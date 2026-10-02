@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kontak Kami</title>
+    <link rel="shortcut icon" href="tbclogo.png" type="image/x-icon" />
+
+    <script>
+      if (localStorage.getItem("username") == null) {
+        alert("Silakan login terlebih dahulu.");
+        window.location.href = "login.html";
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Kontak Kami</h1>
+    </header>
+
+    <nav>
+      <a href="informasitbc.html">Informasi TBC</a>
+      <a href="layanankami.html">Layanan Kami</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="diagnosis.html">Mulai Diagnosis</a>
+      <a href="deskripsi.html">Deskripsi Sistem</a>
+      <a href="kontakkami.html">Kontak Kami</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+    <div class="container">
+      <div class="kontak">
+        <h2>Hubungi Kami</h2>
+
+        <p>
+          Silakan hubungi kami apabila Anda memiliki pertanyaan, kritik, saran,
+          atau mengalami kendala saat mengakses tbchealth. Tim kami
+          akan berusaha memberikan tanggapan secepat mungkin.
+        </p>
+
+        <div class="info-kontak">
+          <div class="card-kontak">
+            <h3>📍 Alamat</h3>
+            <p>
+              tbchealth.comunity<br />
+              Jl. Solo-Purwodadi Km 13<br />
+              Indonesia
+            </p>
+          </div>
+
+          <div class="card-kontak">
+            <h3>📞 Telepon</h3>
+            <p>+62 851-6168-3004</p>
+          </div>
+
+          <div class="card-kontak">
+            <h3>📧 Email</h3>
+            <p>tbchealthcomunity@gmail.com</p>
+          </div>
+
+          <div class="card-kontak">
+            <h3>💬 WhatsApp</h3>
+            <p>+62 851-6168-3004</p>
+          </div>
+        </div>
+
+        <h2>Kirim Pesan</h2>
+
+        <form id="formKontak">
+          <input type="text" id="nama" placeholder="Nama Lengkap" required />
+
+          <input type="email" id="email" placeholder="Alamat Email" required />
+
+          <input type="text" id="subjek" placeholder="Subjek" required />
+
+          <textarea
+            id="pesan"
+            placeholder="Tulis pesan Anda..."
+            required
+          ></textarea>
+
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+
+        <div id="notif"></div>
+      </div>
+    </div>
+
+    <script src="kontakkami.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

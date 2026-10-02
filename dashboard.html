@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard User</title>
+    <link rel="shortcut icon" href="tbclogo.png" type="image/x-icon">
+
+    <script>
+
+if(localStorage.getItem("username")==null){
+
+    alert("Silakan login terlebih dahulu!");
+
+    window.location.href="login.html";
+
+}
+
+</script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>Dashboard</h1>
+</header>
+
+<nav>
+      <a href="informasitbc.html">Informasi TBC</a>
+      <a href="layanankami.html">Layanan Kami</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="diagnosis.html">Mulai Diagnosis</a>
+      <a href="deskripsi.html">Deskripsi Sistem</a>
+      <a href="kontakkami.html">Kontak Kami</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+
+
+<div class="dashboard-container">
+
+    <div class="welcome-card">
+
+        <h2 id="selamat">Halo, Admin 👋</h2>
+
+        <p>
+            Selamat datang di tbchealth.
+            Gunakan dashboard ini untuk mengakses seluruh layanan kesehatan yang tersedia.
+        </p>
+
+    </div>
+
+    </div>
+
+<div class="tips-card">
+
+     <h3>📢 Tahukah Anda?</h3>
+
+     <p>
+
+    Tuberkulosis dapat disembuhkan apabila pasien menjalani
+    pengobatan secara rutin selama minimal enam bulan sesuai
+    anjuran tenaga kesehatan.
+
+    </p>
+
+</div>
+
+    <div class="statistik">
+
+        <div class="stat-card">
+            <h1>1</h1>
+            <p>Diagnosis Hari Ini</p>
+        </div>
+
+        <div class="stat-card">
+            <h1>10</h1>
+            <p>Dokter Tersedia</p>
+        </div>
+
+        <div class="stat-card">
+            <h1>12</h1>
+            <p>Artikel Kesehatan</p>
+        </div>
+
+        <div class="stat-card">
+            <h1>24</h1>
+            <p>Jam Layanan</p>
+        </div>
+
+    </div>
+
+
+
+    <h2 class="judul-menu">Menu Layanan</h2>
+
+    <div class="tips-card">
+
+    <h3>💡 Tips Kesehatan Hari Ini</h3>
+
+     <ul>
+
+         <li>Gunakan masker jika mengalami batuk.</li>
+
+         <li>Tutup mulut ketika batuk atau bersin.</li>
+
+         <li>Pastikan rumah memiliki ventilasi yang baik.</li>
+
+         <li>Konsumsi makanan bergizi.</li>
+
+        <li>Segera lakukan pemeriksaan jika batuk lebih dari 2 minggu.</li>
+
+    </ul>
+
+    </div>
+
+     <div class="menu-grid">
+
+         <a href="diagnosis.html" class="menu-card">
+
+     <div class="menu-icon">🩺</div>
+
+         <h3>Diagnosis</h3>
+
+             <p>Melakukan pemeriksaan awal gejala TBC.</p>
+
+    </a>
+
+
+<a href="informasitbc.html" class="menu-card">
+
+     <div class="menu-icon">📚</div>
+
+         <h3>Informasi TBC</h3>
+
+         <p>Mempelajari penyebab, gejala dan pencegahan.</p>
+
+         </a>
+
+
+<a href="layanankami.html" class="menu-card">
+
+<div class="menu-icon">👨‍⚕️</div>
+
+<h3>Konsultasi Dokter</h3>
+
+<p>Mencari dokter spesialis paru.</p>
+
+</a>
+
+
+<a href="kontakkami.html" class="menu-card">
+
+<div class="menu-icon">☎</div>
+
+<h3>Kontak Kami</h3>
+
+<p>Hubungi administrator.</p>
+
+</a>
+
+
+<a href="deskripsi.html" class="menu-card">
+
+<div class="menu-icon">💻</div>
+
+<h3>Tentang Sistem</h3>
+
+<p>Informasi mengenai sistem pakar.</p>
+
+</a>
+       <script src="login.js"></script>
+</body>
+</html>
